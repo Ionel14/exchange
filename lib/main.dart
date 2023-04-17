@@ -40,8 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
         textDirection: TextDirection.ltr,
         children: <Widget>[
           const Image(
-            image: NetworkImage(
-                'http://storage0.dms.mpinteractiv.ro/media/1/1481/22466/19117627/1/76459788-l.jpg'),
+            image: NetworkImage('http://storage0.dms.mpinteractiv.ro/media/1/1481/22466/19117627/1/76459788-l.jpg'),
             width: 300,
             height: 300,
           ),
@@ -51,8 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
               keyboardType: TextInputType.number,
               style: const TextStyle(fontSize: 30),
               decoration: InputDecoration(
-                  hintText: 'enter the amount in Eur',
-                  errorText: error ? 'please enter a number' : null),
+                  hintText: 'enter the amount in Eur', errorText: error ? 'please enter a number' : null),
               onChanged: (String value) {
                 try {
                   _euro = double.parse(value);
@@ -72,12 +70,9 @@ class _MyHomePageState extends State<MyHomePage> {
               });
             },
             style: ButtonStyle(
-                minimumSize:
-                    MaterialStateProperty.all<Size>(const Size(100, 50)),
-                backgroundColor:
-                    MaterialStateProperty.all<Color>(Colors.black26)),
-            child: const Text('Convert',
-                style: TextStyle(fontSize: 20, color: Colors.black)),
+                minimumSize: MaterialStateProperty.all<Size>(const Size(100, 50)),
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.black26)),
+            child: const Text('Convert', style: TextStyle(fontSize: 20, color: Colors.black)),
           ),
           Text(_lei, style: const TextStyle(fontSize: 30))
         ],
